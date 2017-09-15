@@ -8,7 +8,7 @@ public class TorchManager : MonoBehaviour {
     private float density;
     [SerializeField]
     private float timer;
-    private float darkness = 0.8f;
+    private float darkness = 0.6f;
     private IEnumerator lerpCorroutineEnter;
     private IEnumerator lerpCorroutineExit;
 
