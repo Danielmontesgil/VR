@@ -4,27 +4,30 @@ using UnityEngine;
 
 public class BatAnimations : MonoBehaviour {
 
+    private Animator[] animator;
     [SerializeField]
-    private Animator animator;
+    private GameObject[] children;
     [SerializeField]
-    private Collider collider;
+    private float velocity;
 
-	// Use this for initialization
-	void Start () {
-        animator = GetComponent<Animator>();
-        animator.SetBool("startIdle",true);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    private void Awake()
+    {
+        animator = new Animator[12];
+        for (int i = 0; i < animator.Length; i++)
+        {
+            animator[i] = children[i].GetComponent<Animator>();
+        }
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
+        transform.position += transform.forward * velocity * Time.deltaTime;
         if(collision.gameObject.tag=="Player")
         {
-            animator.SetBool("startMove", true);
+            for (int i = 0; i < animator.Length; i++)
+            {
+                animator[i].SetBool("startMove", true);
+            }
         }
     }
 }
