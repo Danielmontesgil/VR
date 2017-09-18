@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 7454591693be0fd448bd1e09609f031e
+timeCreated: 1505698451
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 180
+  forceTextureCase: -1
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: No Fear
+  fontNames:
+  - No Fear
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

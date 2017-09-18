@@ -1,6 +1,6 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VR;
 
 public class TorchManager : MonoBehaviour {
 
@@ -8,6 +8,11 @@ public class TorchManager : MonoBehaviour {
     private float density;
     [SerializeField]
     private float timer;
+    [SerializeField]
+    private GameObject parasite;
+    [SerializeField]
+    private Camera cam;
+
     private float darkness = 0.6f;
     private IEnumerator lerpCorroutineEnter;
     private IEnumerator lerpCorroutineExit;
@@ -17,18 +22,22 @@ public class TorchManager : MonoBehaviour {
     private void Start()
     {
         newTimer = timer;   
-        //lerpCorroutineEnter = LerpCorroutine(1, density, darkness);
-        //lerpCorroutineExit = LerpCorroutine(-1, density, darkness);
+    }
+
+    private void Update()
+    {
+        if (parasite.gameObject.activeInHierarchy)
+        {
+            VRDevice.DisableAutoVRCameraTracking(cam, true);
+        }
     }
 
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Light")
         {
-            //newTimer = timer;
             StopAllCoroutines();
             StartCoroutine(LerpCorroutine(-1, density, darkness));
-            Debug.Log(RenderSettings.fogDensity);
         }
     }
 
@@ -36,20 +45,15 @@ public class TorchManager : MonoBehaviour {
     {
         if(other.gameObject.tag=="Light")
         {
-            //newTimer = 0;
             StopAllCoroutines();
             StartCoroutine(LerpCorroutine(1, density, darkness));
-            Debug.Log(RenderSettings.fogDensity);
         }
     }
     
     IEnumerator LerpCorroutine(float negative, float densityy, float darknesss)
     {
-        print("entro");
         while (negative > 0 ? newTimer < timer : newTimer > 0)
         {
-            print(RenderSettings.fogDensity);
-            print(timer);
             newTimer += negative * Time.deltaTime;
             RenderSettings.fogDensity = Mathf.Lerp(densityy, darknesss, newTimer / timer);
             yield return null;

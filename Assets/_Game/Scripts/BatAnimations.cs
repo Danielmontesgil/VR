@@ -1,17 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BatAnimations : MonoBehaviour {
 
+    private bool move;
     private Animator[] animator;
+    private float time;
+
     [SerializeField]
     private GameObject[] children;
     [SerializeField]
     private float velocity;
+    [SerializeField]
+    private GvrAudioSource bats;
 
     private void Awake()
     {
+        move = false;
         animator = new Animator[12];
         for (int i = 0; i < animator.Length; i++)
         {
@@ -19,15 +23,34 @@ public class BatAnimations : MonoBehaviour {
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void Start()
     {
-        transform.position += transform.forward * velocity * Time.deltaTime;
+        for (int i = 0; i < animator.Length; i++)
+        {
+            animator[i].SetBool("startMove", true);
+        }
+    }
+
+    private void Update()
+    {
+        if (move == true)
+        {
+            time += 1 * Time.deltaTime;
+            transform.position += transform.forward * velocity * Time.deltaTime;
+        }
+
+        if (time >= 2)
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
+    private void OnTriggerEnter(Collider collision)
+    {
         if(collision.gameObject.tag=="Player")
         {
-            for (int i = 0; i < animator.Length; i++)
-            {
-                animator[i].SetBool("startMove", true);
-            }
+            bats.Play();
+            move = true;
         }
     }
 }

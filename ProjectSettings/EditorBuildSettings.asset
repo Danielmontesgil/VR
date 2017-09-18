@@ -4,4 +4,7 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Game/_Scenes/Cave VR.unity
+    guid: 1251b97a57c281e4bb3ec21a6a5febb5
