@@ -19,7 +19,7 @@ public class Lose : MonoBehaviour {
 	}
 	
 	void Update () {
-        if (parasite.activeInHierarchy)
+        if (parasite.activeInHierarchy || canvasLose.gameObject.activeInHierarchy)
         {
             time += Time.deltaTime;
         }

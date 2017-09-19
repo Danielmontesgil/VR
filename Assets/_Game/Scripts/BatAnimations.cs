@@ -49,6 +49,10 @@ public class BatAnimations : MonoBehaviour {
     {
         if(collision.gameObject.tag=="Player")
         {
+            for (int i = 0; i < children.Length; i++)
+            {
+                children[i].SetActive(true);
+            }
             bats.Play();
             move = true;
         }
