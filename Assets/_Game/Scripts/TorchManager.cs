@@ -13,7 +13,7 @@ public class TorchManager : MonoBehaviour {
     [SerializeField]
     private Camera cam;
 
-    private float darkness = 0.6f;
+    private float darkness = 0.2f;
     private IEnumerator lerpCorroutineEnter;
     private IEnumerator lerpCorroutineExit;
 

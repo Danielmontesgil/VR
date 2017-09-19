@@ -13,7 +13,7 @@ public class GameStart : MonoBehaviour {
 	
 	void Update () {
         time += Time.deltaTime;
-        if (time >= 4)
+        if (time >= 8)
         {
             player.GetComponent<PlayerMovement>().enabled = true;
             gameObject.SetActive(false);
