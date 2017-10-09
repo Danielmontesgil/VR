@@ -7,20 +7,37 @@ public class Win : MonoBehaviour {
     private GameObject player;
     [SerializeField]
     private Canvas canvasWin;
+    [SerializeField]
+    private Canvas canvasNeed;
 
     private float time;
+    private float timeNeed;
+    private float chests;
 
 	void Start () {
+
 	}
 	
 	void Update () {
+        chests = player.GetComponent<CollectChests>().count;
+        Debug.Log(chests);
+
         if (canvasWin.gameObject.activeInHierarchy)
         {
             time += Time.deltaTime;
         }
-        if (time >= 2)
+        if (time >= 4)
         {
             SceneManager.LoadScene(0);
+        }
+        if (canvasNeed.gameObject.activeInHierarchy)
+        {
+            timeNeed += Time.deltaTime;
+        }
+        if (timeNeed >= 4)
+        {
+            canvasNeed.gameObject.SetActive(false);
+            player.GetComponent<PlayerMovement>().enabled = true;
         }
     }
 
@@ -28,9 +45,17 @@ public class Win : MonoBehaviour {
     {
         if (other.gameObject.tag == "Player")
         {
-            canvasWin.gameObject.SetActive(true);
-            player.GetComponent<PlayerMovement>().enabled = false;
-            player.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+            if (chests >= 6)
+            {
+                canvasWin.gameObject.SetActive(true);
+                player.GetComponent<PlayerMovement>().enabled = false;
+                player.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+            }
+            else
+            {
+                canvasNeed.gameObject.SetActive(true);
+                player.GetComponent<PlayerMovement>().enabled = false;
+            }
         }
     }
 }

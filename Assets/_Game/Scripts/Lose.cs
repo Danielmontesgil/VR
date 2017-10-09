@@ -28,7 +28,7 @@ public class Lose : MonoBehaviour {
             canvasLose.gameObject.SetActive(true);
             parasite.gameObject.SetActive(false);
         }
-        if (time >= 5)
+        if (time >= 6)
         {
             SceneManager.LoadScene(0);
         }
