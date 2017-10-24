@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour {
 
     public void Update()
     {
-        if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Stationary || OVRInput.Get(OVRInput.Touch.One) || Input.GetKey(KeyCode.W))
+        if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Stationary || OVRInput.Get(OVRInput.Button.PrimaryTouchpad) || Input.GetKey(KeyCode.W))
         {
             if (!steps.isPlaying)
             {
