@@ -15,7 +15,7 @@ public class GameStart : MonoBehaviour {
 	
 	void Update () {
         time += Time.deltaTime;
-        if (time >= 8)
+        if (time >= 10)
         {
             perma.gameObject.SetActive(true);
             player.GetComponent<PlayerMovement>().enabled = true;
