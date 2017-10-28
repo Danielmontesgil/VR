@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour {
     private Camera cam;
     [SerializeField]
     private Rigidbody rb;
+    [HideInInspector]
+    public static float count=0f;
 
     public void Update()
     {
@@ -24,7 +26,10 @@ public class PlayerMovement : MonoBehaviour {
         }
         else
         {
-            steps.Stop();
+            if (steps.isPlaying)
+            {
+                steps.Stop();
+            }
         }
     }
 

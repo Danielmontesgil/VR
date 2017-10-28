@@ -240,7 +240,8 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 135
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114289426219256682, guid: 78eab472a1e23a94290002295f82ce6c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 78eab472a1e23a94290002295f82ce6c, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &22260768
@@ -483,7 +484,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.0000005
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114289426219256682, guid: 78eab472a1e23a94290002295f82ce6c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 78eab472a1e23a94290002295f82ce6c, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &130723530
@@ -906,7 +908,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.0000005
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114289426219256682, guid: 78eab472a1e23a94290002295f82ce6c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 78eab472a1e23a94290002295f82ce6c, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &184080632 stripped
@@ -1388,6 +1391,7 @@ MonoBehaviour:
   player: {fileID: 2042706899}
   canvasWin: {fileID: 2091867070}
   canvasNeed: {fileID: 2118413801}
+  canvasPerma: {fileID: 1775420015}
 --- !u!1 &349416433
 GameObject:
   m_ObjectHideFlags: 0
@@ -1530,7 +1534,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 3.34, y: -0.15}
-  m_SizeDelta: {x: 3.54, y: 1.3}
+  m_SizeDelta: {x: 3.19, y: 1.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &380118169
 MonoBehaviour:
@@ -1564,7 +1568,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Oxigeno
+  m_Text: Veneno
 --- !u!222 &380118170
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1596,14 +1600,14 @@ RectTransform:
   m_GameObject: {fileID: 394066537}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.27, y: 0.2, z: 0.3}
+  m_LocalScale: {x: 0.21, y: 0.165, z: 0.3}
   m_Children: []
   m_Father: {fileID: 209874113}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -1.49}
+  m_AnchoredPosition: {x: 0, y: -1.61}
   m_SizeDelta: {x: 11, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &394066539
@@ -1640,16 +1644,34 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Estas encerrado en esta cueva, encuentra la manera de salir, el agua puede
     ser un gran aliado, y no olvides los cofres, son el tesoro mas preciado, pero
-    ciudado posiblemente no estas solo...
+    ciudado con el veneno y posiblemente no estas solo...
 
 
-    Para moverte usa el boton de la cardboard'
+    Para moverte usa el boton up del gear control, para recoger los cofres presiona
+    el del centro'
 --- !u!222 &394066540
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 394066537}
+--- !u!1 &432464616 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1031597147718978, guid: 78eab472a1e23a94290002295f82ce6c,
+    type: 2}
+  m_PrefabInternal: {fileID: 740562906}
+--- !u!114 &432464617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 432464616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88db994cdd22a4341adffb78924e2a32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chests: {fileID: 1909465257}
 --- !u!1 &438376622
 GameObject:
   m_ObjectHideFlags: 0
@@ -2060,6 +2082,23 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 479712, guid: b226c2c9ed14da940b027de536630825, type: 2}
   m_PrefabInternal: {fileID: 546942920}
+--- !u!1 &577610280 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1031597147718978, guid: 78eab472a1e23a94290002295f82ce6c,
+    type: 2}
+  m_PrefabInternal: {fileID: 183499821}
+--- !u!114 &577610281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 577610280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88db994cdd22a4341adffb78924e2a32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chests: {fileID: 1909465257}
 --- !u!1 &632033287
 GameObject:
   m_ObjectHideFlags: 0
@@ -2139,6 +2178,7 @@ MonoBehaviour:
   player: {fileID: 2042706899}
   scream: {fileID: 632033289}
   canvasLose: {fileID: 1865159191}
+  canvasPerma: {fileID: 1775420015}
 --- !u!65 &632033291
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2515,7 +2555,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114289426219256682, guid: 78eab472a1e23a94290002295f82ce6c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 78eab472a1e23a94290002295f82ce6c, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &756106327 stripped
@@ -2888,11 +2929,45 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.6088419, y: 1, z: 3.033426}
   m_Center: {x: -0.5256691, y: 0, z: -0.034419894}
+--- !u!1 &964362989 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1031597147718978, guid: 78eab472a1e23a94290002295f82ce6c,
+    type: 2}
+  m_PrefabInternal: {fileID: 18149165}
+--- !u!114 &964362990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 964362989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88db994cdd22a4341adffb78924e2a32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chests: {fileID: 1909465257}
 --- !u!4 &979788312 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4125073518379912, guid: 78eab472a1e23a94290002295f82ce6c,
     type: 2}
   m_PrefabInternal: {fileID: 18149165}
+--- !u!1 &986106607 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1031597147718978, guid: 78eab472a1e23a94290002295f82ce6c,
+    type: 2}
+  m_PrefabInternal: {fileID: 64112725}
+--- !u!114 &986106608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 986106607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88db994cdd22a4341adffb78924e2a32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chests: {fileID: 1909465257}
 --- !u!1 &1015792084
 GameObject:
   m_ObjectHideFlags: 0
@@ -3021,7 +3096,8 @@ Prefab:
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2042706907}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114289426219256682, guid: 78eab472a1e23a94290002295f82ce6c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 78eab472a1e23a94290002295f82ce6c, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1030929273
@@ -3461,6 +3537,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 171526, guid: 60270cf52a5e94998a5a335989159738, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 723926960, guid: 60270cf52a5e94998a5a335989159738, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 60270cf52a5e94998a5a335989159738, type: 2}
@@ -3861,6 +3941,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1444029814}
+--- !u!1 &1472793365 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1031597147718978, guid: 78eab472a1e23a94290002295f82ce6c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1019894943}
+--- !u!114 &1472793366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1472793365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88db994cdd22a4341adffb78924e2a32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chests: {fileID: 1909465257}
 --- !u!4 &1521536584 stripped
 Transform:
   m_PrefabParentObject: {fileID: 479712, guid: b226c2c9ed14da940b027de536630825, type: 2}
@@ -4347,6 +4444,23 @@ MonoBehaviour:
   sourceMinDistance: 1
   hrtfEnabled: 1
   audioSource: {fileID: 0}
+--- !u!1 &1653864383 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1031597147718978, guid: 78eab472a1e23a94290002295f82ce6c,
+    type: 2}
+  m_PrefabInternal: {fileID: 2109581409}
+--- !u!114 &1653864384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1653864383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88db994cdd22a4341adffb78924e2a32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chests: {fileID: 1909465257}
 --- !u!1 &1674635437
 GameObject:
   m_ObjectHideFlags: 0
@@ -4900,7 +5014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.035142712, g: 0.04149259, b: 0.9558824, a: 1}
+  m_Color: {r: 0.7108014, g: 0, b: 0.9632353, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4912,7 +5026,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 1
-  m_FillAmount: 1
+  m_FillAmount: 0.02
   m_FillClockwise: 1
   m_FillOrigin: 0
 --- !u!222 &1951384314
@@ -5226,7 +5340,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chests: {fileID: 1909465257}
-  count: 0
 --- !u!1 &2091867067
 GameObject:
   m_ObjectHideFlags: 0
@@ -5383,7 +5496,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.0000005
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114289426219256682, guid: 78eab472a1e23a94290002295f82ce6c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 78eab472a1e23a94290002295f82ce6c, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &2118413797

@@ -25,22 +25,22 @@ public class OxigenPoison : MonoBehaviour {
         if (time >= 30)
         {
             poisonBar.fillAmount = 0.1f;
-            oxygenBar.fillAmount = 0.9f;
+            oxygenBar.fillAmount = 0.1f;
         }
         if (time >= 60)
         {
             poisonBar.fillAmount = 0.2f;
-            oxygenBar.fillAmount = 0.8f;
+            oxygenBar.fillAmount = 0.2f;
         }
         if (time >= 90)
         {
             poisonBar.fillAmount = 0.3f;
-            oxygenBar.fillAmount = 0.7f;
+            oxygenBar.fillAmount = 0.3f;
         }
         if (time >= 120)
         {
             poisonBar.fillAmount = 0.4f;
-            oxygenBar.fillAmount = 0.6f;
+            oxygenBar.fillAmount = 0.4f;
         }
         if (time >= 150)
         {
@@ -50,33 +50,29 @@ public class OxigenPoison : MonoBehaviour {
         if (time >= 180)
         {
             poisonBar.fillAmount = 0.6f;
-            oxygenBar.fillAmount = 0.4f;
+            oxygenBar.fillAmount = 0.6f;
         }
         if (time >= 210)
         {
             poisonBar.fillAmount = 0.7f;
-            oxygenBar.fillAmount = 0.3f;
+            oxygenBar.fillAmount = 0.7f;
         }
         if (time >= 240)
         {
             poisonBar.fillAmount = 0.8f;
-            oxygenBar.fillAmount = 0.2f;
+            oxygenBar.fillAmount = 0.8f;
         }
         if (time >= 270)
         {
             poisonBar.fillAmount = 0.9f;
-            oxygenBar.fillAmount = 0.1f;
+            oxygenBar.fillAmount = 0.9f;
         }
         if (time >= 300)
         {
             poisonBar.fillAmount = 1f;
-            oxygenBar.fillAmount = 0.01f;
+            oxygenBar.fillAmount = 1f;
         }
-        if (oxygenBar.fillAmount <= 0.3f)
-        {
-            oxygenBar.color = Color.red;
-        }
-        if (poisonBar.fillAmount == 1)
+        if (oxygenBar.fillAmount == 1)
         {
             lose.gameObject.SetActive(true);
             this.gameObject.SetActive(false);

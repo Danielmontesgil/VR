@@ -11,6 +11,8 @@ public class Lose : MonoBehaviour {
     private GvrAudioSource scream;
     [SerializeField]
     private Canvas canvasLose;
+    [SerializeField]
+    private Canvas canvasPerma;
 
     private float time;
 
@@ -38,6 +40,7 @@ public class Lose : MonoBehaviour {
     {
         player.GetComponent<PlayerMovement>().enabled = false;
         player.GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
+        canvasPerma.gameObject.SetActive(false);
         parasite.gameObject.SetActive(true);
         scream.Play();
     }

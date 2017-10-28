@@ -9,6 +9,8 @@ public class Win : MonoBehaviour {
     private Canvas canvasWin;
     [SerializeField]
     private Canvas canvasNeed;
+    [SerializeField]
+    private Canvas canvasPerma;
 
     private float time;
     private float timeNeed;
@@ -19,8 +21,7 @@ public class Win : MonoBehaviour {
 	}
 	
 	void Update () {
-        chests = player.GetComponent<CollectChests>().count;
-        Debug.Log(chests);
+        chests = PlayerMovement.count;
 
         if (canvasWin.gameObject.activeInHierarchy)
         {
@@ -48,12 +49,14 @@ public class Win : MonoBehaviour {
             if (chests >= 6)
             {
                 canvasWin.gameObject.SetActive(true);
+                canvasPerma.gameObject.SetActive(false);
                 player.GetComponent<PlayerMovement>().enabled = false;
                 player.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
             }
             else
             {
                 canvasNeed.gameObject.SetActive(true);
+                canvasPerma.gameObject.SetActive(false);
                 player.GetComponent<PlayerMovement>().enabled = false;
             }
         }
