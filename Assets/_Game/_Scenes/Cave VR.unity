@@ -292,6 +292,11 @@ Prefab:
       propertyPath: sourceVolume
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114020850248998186, guid: 6ca28dfe48a98e24a92b1b08e6f25412,
+        type: 2}
+      propertyPath: gainDb
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6ca28dfe48a98e24a92b1b08e6f25412, type: 2}
   m_IsPrefabParent: 0
@@ -1764,6 +1769,11 @@ Prefab:
         type: 2}
       propertyPath: sourceVolume
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114020850248998186, guid: 6ca28dfe48a98e24a92b1b08e6f25412,
+        type: 2}
+      propertyPath: gainDb
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6ca28dfe48a98e24a92b1b08e6f25412, type: 2}
@@ -3425,6 +3435,11 @@ Prefab:
       propertyPath: sourceVolume
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114020850248998186, guid: 6ca28dfe48a98e24a92b1b08e6f25412,
+        type: 2}
+      propertyPath: gainDb
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6ca28dfe48a98e24a92b1b08e6f25412, type: 2}
   m_IsPrefabParent: 0
@@ -3627,6 +3642,11 @@ Prefab:
         type: 2}
       propertyPath: directivitySharpness
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114020850248998186, guid: 6ca28dfe48a98e24a92b1b08e6f25412,
+        type: 2}
+      propertyPath: gainDb
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6ca28dfe48a98e24a92b1b08e6f25412, type: 2}
@@ -5289,7 +5309,7 @@ MonoBehaviour:
   sourceSpatialBlend: 1
   sourceDopplerLevel: 1
   sourceSpread: 0
-  sourceVolume: 0.1
+  sourceVolume: 0.07
   sourceRolloffMode: 0
   sourceMaxDistance: 500
   sourceMinDistance: 1
@@ -5311,13 +5331,13 @@ MonoBehaviour:
   directivitySharpness: 1
   listenerDirectivityAlpha: 0
   listenerDirectivitySharpness: 1
-  gainDb: 3
+  gainDb: -11.6
   occlusionEnabled: 0
   playOnAwake: 0
   sourceClip: {fileID: 8300000, guid: 1a99fdc8540f39340a8188f6bef78039, type: 3}
   sourceLoop: 1
   sourceMute: 0
-  sourcePitch: 1.4
+  sourcePitch: 1.57
   sourcePriority: 128
   sourceSpatialBlend: 1
   sourceDopplerLevel: 1
