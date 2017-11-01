@@ -38,6 +38,7 @@ public class Win : MonoBehaviour {
         if (timeNeed >= 4)
         {
             canvasNeed.gameObject.SetActive(false);
+            canvasPerma.gameObject.SetActive(true);
             player.GetComponent<PlayerMovement>().enabled = true;
         }
     }
