@@ -1118,6 +1118,7 @@ GameObject:
   - component: {fileID: 209874112}
   - component: {fileID: 209874111}
   - component: {fileID: 209874114}
+  - component: {fileID: 209874115}
   m_Layer: 5
   m_Name: Canvas Start
   m_TagString: Untagged
@@ -1199,6 +1200,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2042706899}
   perma: {fileID: 1775420015}
+  audioInstructions:
+  - {fileID: 8300000, guid: 9ab14ee25e379d54898473ac016ef295, type: 3}
+  - {fileID: 8300000, guid: 34f28e9e25554bf46b676ae3593fb263, type: 3}
+  - {fileID: 8300000, guid: a26449a2d9cc4e54bb7052343d82e76b, type: 3}
+  - {fileID: 8300000, guid: 67f0bd677014a4445ab0716db1be8ba5, type: 3}
+  - {fileID: 8300000, guid: f538b399b94ceff4183905a915e65800, type: 3}
+  - {fileID: 8300000, guid: 3b170425299bf3b49af2f72fdc9b8b4a, type: 3}
+--- !u!114 &209874115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 209874110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dbca64e524ea44f9b26142ec59aca8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bypassRoomEffects: 0
+  directivityAlpha: 0
+  directivitySharpness: 1
+  listenerDirectivityAlpha: 0
+  listenerDirectivitySharpness: 1
+  gainDb: 0
+  occlusionEnabled: 0
+  playOnAwake: 1
+  sourceClip: {fileID: 0}
+  sourceLoop: 0
+  sourceMute: 0
+  sourcePitch: 1
+  sourcePriority: 128
+  sourceSpatialBlend: 1
+  sourceDopplerLevel: 1
+  sourceSpread: 0
+  sourceVolume: 1
+  sourceRolloffMode: 0
+  sourceMaxDistance: 500
+  sourceMinDistance: 1
+  hrtfEnabled: 1
+  audioSource: {fileID: 0}
 --- !u!1 &216242727 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 171526, guid: 60270cf52a5e94998a5a335989159738, type: 2}
